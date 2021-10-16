@@ -1,0 +1,30 @@
+package homeworkcycles;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		String line = "";
+		int g = 1;
+		int h = 1;
+		while (h <= 5) {
+			if (g % 2 != 0) {
+				line+="***";
+				g++;
+			}
+			if (g % 2 == 0) {
+				line+="+++";
+				g++;
+			}
+			if (g==n) {
+				line+="\n";
+				g=1;
+				h++;
+			}
+		}
+		System.out.println(line);
+	}
+}
